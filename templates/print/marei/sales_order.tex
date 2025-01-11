@@ -70,6 +70,12 @@
 
 \begin{document}
 
+\setkomavar{signature}{%
+  <%employee_company%>%
+  \ifhmode\\\fi
+  <%salesman_name%>%
+}
+
 \begin{letter}{
     <%name%>\strut\\
     <%if department_1%><%department_1%>\\<%end if%>%
