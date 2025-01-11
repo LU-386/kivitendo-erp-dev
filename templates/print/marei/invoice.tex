@@ -98,6 +98,12 @@
 
 \begin{document}
 
+\setkomavar{signature}{%
+  <%employee_company%>%
+  \ifhmode\\\fi
+  <%salesman_name%>%
+}
+
 \begin{letter}{%
   <%if billing_address_id%>%
     <%billing_address_name%> \strut\\%
