@@ -697,6 +697,8 @@ sub _validate_data {
   my %result;
   my $prefix = $::locale->text('The ZUGFeRD invoice data cannot be generated because the data validation failed.') . ' ';
 
+  # TODO: change validation from "UStID && valid" to "UStID && valid || Steuer-IdNr"
+
   if (!$::instance_conf->get_co_ustid) {
     SL::X::ZUGFeRDValidation->throw(message => $prefix . $::locale->text('The VAT registration number is missing in the client configuration.'));
   }
